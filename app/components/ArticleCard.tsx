@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { Article } from '../types';
 import Image from 'next/image';
