@@ -8,6 +8,8 @@ import {
 import ArticleCard from "../components/ArticleCard";
 import Breadcrumb from "../components/Breadcrumb";
 import Image from "next/image";
+import LayoutRenderer from "../components/LayoutRenderer";
+import { initializeLayoutSystem } from "../lib/layouts/init";
 
 interface CategoryPageProps {
   params: Promise<{
@@ -25,6 +27,9 @@ export default async function CategoryPage({
   const { category } = await params;
   const { slug } = await searchParams;
 
+  // Initialize layout system if not already initialized
+  initializeLayoutSystem();
+
   // If there's a slug, this is an article page
   if (slug) {
     const article = getArticleBySlug(slug);
@@ -33,7 +38,27 @@ export default async function CategoryPage({
       notFound();
     }
 
-    // Get category data for breadcrumb
+    // Convert article to PageContent format for LayoutRenderer
+    const articlePageData = {
+      id: article.id,
+      title: article.title,
+      slug: article.slug,
+      content: article.content,
+      category: article.category,
+      subcategory: article.subcategory,
+      publishedAt: article.publishedAt,
+      type: 'article' as const,
+      layoutId: article.layoutId || 'article-default',
+      excerpt: article.excerpt,
+      seoConfig: article.seoConfig
+    };
+
+    // Use LayoutRenderer for articles with layout configuration
+    if (article.layoutId) {
+      return <LayoutRenderer pageData={articlePageData} />;
+    }
+
+    // Fallback to original article layout for articles without layout configuration
     const categoryData = getCategoryData(category);
 
     const formatDate = (dateString: string) => {
@@ -193,6 +218,12 @@ export default async function CategoryPage({
   // Get page content if this is a page type
   const pageContent = getPageContent(category);
 
+  // If we have page content with a layout, use the LayoutRenderer
+  if (pageContent && pageContent.layoutId) {
+    return <LayoutRenderer pageData={pageContent} />;
+  }
+
+  // Fallback to original layout for category pages without specific page content
   const breadcrumbItems = [{ title: categoryData.title }];
 
   return (

@@ -113,7 +113,13 @@ export const mockArticles: Article[] = [
     publishedAt: '2024-02-20T10:00:00Z',
     author: 'Provincial Reporter',
     image: '/brave.png',
-    tags: ['development', 'siem-reap', 'infrastructure']
+    tags: ['development', 'siem-reap', 'infrastructure'],
+    layoutId: 'article-hero',
+    seoConfig: {
+      title: 'Provincial Development Initiative Launched in Siem Reap - Latest News',
+      description: 'A new development initiative has been launched to boost economic growth in Siem Reap province.',
+      keywords: ['development', 'siem-reap', 'infrastructure', 'tourism', 'economy']
+    }
   },
   {
     id: 'art-2',
@@ -206,7 +212,14 @@ export const mockPageContent: PageContent[] = [
     category: 'about',
     subcategory: 'structure',
     publishedAt: '2024-01-15T10:00:00Z',
-    type: 'page'
+    type: 'page',
+    layoutId: 'page-default',
+    excerpt: 'Learn about our organizational structure and how we serve the people of Cambodia.',
+    seoConfig: {
+      title: 'Organizational Structure - About Us',
+      description: 'Discover our organizational structure, leadership, and departments.',
+      keywords: ['organization', 'structure', 'leadership', 'departments']
+    }
   },
   {
     id: 'page-2',
@@ -224,7 +237,14 @@ export const mockPageContent: PageContent[] = [
     category: 'about',
     subcategory: 'units',
     publishedAt: '2024-01-15T10:00:00Z',
-    type: 'page'
+    type: 'page',
+    layoutId: 'page-hero',
+    excerpt: 'Discover our specialized operational units and their roles in public administration.',
+    seoConfig: {
+      title: 'Our Units - About Us',
+      description: 'Learn about our specialized units and their functions.',
+      keywords: ['units', 'departments', 'operations', 'administration']
+    }
   },
   {
     id: 'page-3',
