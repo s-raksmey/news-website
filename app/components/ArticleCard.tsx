@@ -18,7 +18,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
     if (article.subcategory) {
       return `/${article.category}/${article.subcategory}/${article.slug}`;
     }
-    return `/${article.category}/${article.slug}`;
+    return `/${article.category}?slug=${article.slug}`;
   };
 
   return (
