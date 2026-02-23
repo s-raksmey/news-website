@@ -30,6 +30,19 @@ export interface PageContent {
   subcategory?: string;
   publishedAt: string;
   type: 'page' | 'article';
+  layoutId?: string; // Reference to layout configuration
+  layoutOverrides?: Array<{
+    sectionId: string;
+    props?: Record<string, any>;
+    hide?: boolean;
+  }>; // Page-specific layout customizations
+  seoConfig?: {
+    title?: string;
+    description?: string;
+    keywords?: string[];
+    ogImage?: string;
+  };
+  excerpt?: string; // For hero sections and previews
 }
 
 export interface MenuStructure {
