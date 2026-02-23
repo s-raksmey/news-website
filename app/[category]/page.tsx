@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { getCategoryData, getArticlesByCategory, getPageContent, getArticleBySlug } from '../data/mockData';
 import ArticleCard from '../components/ArticleCard';
 import Breadcrumb from '../components/Breadcrumb';
+import Image from 'next/image';
 
 interface CategoryPageProps {
   params: Promise<{
@@ -101,7 +102,7 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
             {/* Article Image */}
             {article.image && (
               <div className="aspect-video bg-gray-200">
-                <img
+                <Image
                   src={article.image}
                   alt={article.title}
                   className="w-full h-full object-cover"

@@ -78,7 +78,7 @@ export default function Navigation() {
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0">
+            <Link href="/" className="shrink-0">
               <h1 className="text-xl font-bold text-blue-600">News Portal</h1>
             </Link>
           </div>

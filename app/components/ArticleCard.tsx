@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Article } from '../types';
+import Image from 'next/image';
 
 interface ArticleCardProps {
   article: Article;
@@ -25,7 +26,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
     <article className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
       {article.image && (
         <div className="aspect-video bg-gray-200">
-          <img
+          <Image
             src={article.image}
             alt={article.title}
             className="w-full h-full object-cover"
