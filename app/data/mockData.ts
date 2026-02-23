@@ -112,7 +112,7 @@ export const mockArticles: Article[] = [
     subcategory: 'province',
     publishedAt: '2024-02-20T10:00:00Z',
     author: 'Provincial Reporter',
-    image: '/images/siem-reap-development.jpg',
+    image: '/brave.png',
     tags: ['development', 'siem-reap', 'infrastructure']
   },
   {
@@ -133,6 +133,7 @@ export const mockArticles: Article[] = [
     subcategory: 'province',
     publishedAt: '2024-02-19T14:30:00Z',
     author: 'Agriculture Correspondent',
+    image: '/brave.png',
     tags: ['agriculture', 'battambang', 'rice', 'harvest']
   },
   
