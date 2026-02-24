@@ -1,6 +1,6 @@
 'use client';
 
-import { LayoutConfig } from '@/types/layout';
+import { LayoutConfig } from '../../types/layout';
 
 interface LayoutPreviewProps {
   layout: LayoutConfig;

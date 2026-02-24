@@ -1,5 +1,5 @@
 // Layout Registry System - Core layout management
-import { LayoutConfig, LayoutValidationResult, LayoutRegistryEntry } from '@/types/layout';
+import { LayoutConfig, LayoutValidationResult, LayoutRegistryEntry } from '../../types/layout';
 import { ComponentType, lazy } from 'react';
 
 /**

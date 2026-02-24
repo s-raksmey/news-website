@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
-import { layoutRegistry } from '@/lib/layouts/registry';
-import { PageContent } from '@/types';
+import { layoutRegistry } from '../lib/layouts/registry';
+import { PageContent } from '../types';
 
 interface LayoutRendererProps {
   pageData: PageContent;
@@ -28,8 +28,8 @@ export default function LayoutRenderer({ pageData, children }: LayoutRendererPro
   return (
     <div className="min-h-screen bg-gray-50">
       {finalLayout.sections
-        .sort((a, b) => a.order - b.order)
-        .map((section) => {
+        .sort((a: any, b: any) => a.order - b.order)
+        .map((section: any) => {
           // Skip hidden sections
           if (pageData.layoutOverrides?.some(override => 
             override.sectionId === section.id && override.hide

@@ -26,4 +26,4 @@ export type {
   LayoutValidationResult,
   SEOConfig,
   LayoutOverride
-} from '@/types/layout';
+} from '../../types/layout';

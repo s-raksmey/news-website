@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { LayoutSelectorProps } from '@/types/layout';
-import { layoutRegistry } from '@/lib/layouts/registry';
+import { LayoutSelectorProps } from '../../types/layout';
+import { layoutRegistry } from '../../lib/layouts/registry';
 import LayoutPreview from './LayoutPreview';
 
 /**

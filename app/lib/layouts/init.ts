@@ -6,7 +6,7 @@ import {
   ContentSection, 
   ArticleHeader, 
   SidebarSection 
-} from '@/components/layouts/sections';
+} from '../../components/layouts/sections';
 
 /**
  * Initialize the layout system by registering all default layouts
