@@ -1,4 +1,4 @@
-import { ContentSectionProps } from '@/types/layout';
+import { ContentSectionProps } from '../../../types/layout';
 
 /**
  * Content Section Component - Flexible content display with various styling options

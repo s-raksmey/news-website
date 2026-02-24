@@ -10,4 +10,4 @@ export type {
   ContentSectionProps,
   ArticleHeaderProps,
   SidebarSectionProps
-} from '@/types/layout';
+} from '../../../types/layout';

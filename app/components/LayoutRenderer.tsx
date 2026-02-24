@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
-import { layoutRegistry } from '@/lib/layouts/registry';
-import { PageContent } from '@/types';
+import { layoutRegistry } from '../lib/layouts/registry';
+import { PageContent } from '../types';
 
 interface LayoutRendererProps {
   pageData: PageContent;
