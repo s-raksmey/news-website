@@ -1,4 +1,6 @@
-import { HeroSectionProps } from '@/types/layout';
+'use client';
+
+import { HeroSectionProps } from '../../../types/layout';
 import Image from 'next/image';
 
 /**

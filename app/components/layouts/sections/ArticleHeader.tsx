@@ -1,4 +1,6 @@
-import { ArticleHeaderProps } from '@/types/layout';
+'use client';
+
+import { ArticleHeaderProps } from '../../../types/layout';
 import Image from 'next/image';
 import Breadcrumb from '../../Breadcrumb';
 

@@ -19,6 +19,13 @@ export interface Article {
   author: string;
   image?: string;
   tags: string[];
+  layoutId?: string; // Reference to layout configuration
+  seoConfig?: {
+    title?: string;
+    description?: string;
+    keywords?: string[];
+    ogImage?: string;
+  };
 }
 
 export interface PageContent {

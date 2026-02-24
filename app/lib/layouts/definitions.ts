@@ -1,4 +1,4 @@
-import { LayoutConfig } from '@/types/layout';
+import { LayoutConfig } from '../../types/layout';
 
 /**
  * Default Layout Configurations

@@ -1,4 +1,6 @@
-import { SidebarSectionProps } from '@/types/layout';
+'use client';
+
+import { SidebarSectionProps } from '../../../types/layout';
 
 /**
  * Sidebar Section Component - Flexible sidebar with widget support
